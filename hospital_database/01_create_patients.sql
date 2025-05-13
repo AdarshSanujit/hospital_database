@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS patients (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    age TEXT CHECK(age GLOB '[0-9]*'),
+    disease TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
